@@ -1,0 +1,19 @@
+# https://testdriven.io/blog/github-actions-docker/
+# https://github.com/youssefbrr/self-hosted-runner/blob/main/docker-compose.yml
+services:
+  runner:
+    build: .
+    restart: always
+    environment:
+      - REPO
+      - REG_TOKEN
+    deploy:
+      mode: replicated
+      replicas: 1
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+        reservations:
+          cpus: '0.4'
+          memory: 256M

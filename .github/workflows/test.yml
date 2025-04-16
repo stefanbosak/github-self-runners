@@ -1,0 +1,10 @@
+name: Simple Runner Test
+on: [push]
+jobs:
+  test:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Run a basic command
+        run: echo "GitHub self-hosted runner is working!"
