@@ -10,7 +10,7 @@ ARG RUNNER_VERSION=2.323.0
 # Add a user for the runner
 RUN useradd -m -s /bin/bash runner
 
-# update the base packages and add a non-sudo user
+# update the base packages
 RUN apt-get update -y && apt-get upgrade -y
 
 # install packages
