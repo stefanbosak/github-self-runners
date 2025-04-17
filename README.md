@@ -1,20 +1,28 @@
 # Intro
 
- Aim of this scope is providing support for GitHub self-hosted runners operated as Docker environment. 
+ This scope provides support for GitHub self-hosted runners operated as Docker environment. 
 
 # Examples
-- docker compose (build, run, scale):
-- docker compose up -d --scale runner=2
-- docker compose down runner
+- 
+**setup**
+  - edit setvariables.sh (modify variables correspondingly)
+  - source setvariables.sh
 
- **build:**
+**Docker compose build, run and scale runners:**
+  - docker compose up -d --scale runner=2
+
+**Docker compose stop runners:**
+- - docker compose down runner
+
+ **Docker build runner:**
  - docker build to create runner-image:
  ./runner_build.sh
 
- **start:**
+ **Docker start runner instance:**
  - docker run to start runner (possible to start any amount as needed):
  ./runner_start.sh
 
- **stop:**
- - docker container stop
+ **Docker stop all runners:**
+ - docker container ls --filter "name=runner-*" (get list of activated runners)
+ - docker container stop runner-... (stop selected runner)
  ./runners_stop.sh (stop all of previously started runners)
