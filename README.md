@@ -25,4 +25,4 @@
  **Docker stop all runners:**
  - docker container ls --filter "name=runner-*" (get list of activated runners)
  - docker container stop runner-... (stop selected runner)
- ./runners_stop.sh (stop all of previously started runners)
+ - ./runners_stop.sh (stop all of previously started runners)
