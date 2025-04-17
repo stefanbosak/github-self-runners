@@ -3,7 +3,7 @@
  This scope provides support for GitHub self-hosted runners operated as Docker environment. 
 
 # Examples
-- 
+
 **setup**
   - edit setvariables.sh (modify variables correspondingly)
   - source setvariables.sh
